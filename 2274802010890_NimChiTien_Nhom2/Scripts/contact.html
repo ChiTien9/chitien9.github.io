@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="poly.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Liên Hệ - Nhóm 2 Laptop</title>
+</head>
+
+<body>
+    <div class="container" style="height: auto">
+        <header class="row">
+            <div class="shopping-mall">
+                <h1>Nhóm<span> <img style="width: 52px; height: auto;" src="../Images/02.jpg" alt=""></span> Laptop</h1>
+                <h5>The center point of the future technology</h5>
+            </div>
+            <img class="pull-right" src="../Images/aidee.png" />
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../Scripts/introduction.html"><span class="glyphicon glyphicon-list-alt"></span>
+                                Giới thiệu<span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-earphone"></span> Liên
+                                hệ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-th-list"></span> Danh mục<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Điện thoại di động</a></li>
+                                <li><a href="#">Máy tính xách tay</a></li>
+                                <li><a href="#">Máy tính để bàn</a></li>
+                                <li><a href="#">Chuột</a></li>
+                                <li><a href="#">Bàn phím</a></li>
+                                <li><a href="#">Adapter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nhập từ khóa" id="searchInput">
+                        </div>
+                        <button type="submit" class="btn btn-default" onclick="searchProducts()"><span
+                                class="glyphicon glyphicon-search"></span>
+                            Tìm kiếm</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-user"></span> Tài khoản<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="accountinfo.html">Thông tin tài khoản</a></li>
+                                <li><a href="#">Đổi mật khẩu</a></li>
+                                <li><a href="#">Cài đặt tài khoản</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../Scripts/cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ
+                                hàng (<span id="cartCount">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Section -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="contact-section">
+                    <h2 class="contact-heading">Liên Hệ Với Chúng Tôi</h2>
+                    <p class="text-center">Chúng tôi rất hân hạnh được hỗ trợ bạn. Vui lòng liên hệ qua các kênh dưới đây để nhận thông tin chi tiết hoặc giải đáp thắc mắc.</p>
+
+                    <div class="contact-info text-center">
+                        <p><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:support@nhom2laptop.com">support@nhom2laptop.com</a></p>
+                        <p><span class="glyphicon glyphicon-phone"></span> Điện thoại: <a href="tel:+8439393939">+84 393 939 39</a></p>
+                    </div>
+
+                    <div class="contact-form">
+                        <div class="col-md-8 col-md-offset-2">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Họ và Tên</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Tin nhắn</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Nhập nội dung tin nhắn" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary center-block">Gửi Tin Nhắn</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links text-center">
+                        <a href="https://www.facebook.com/example" target="_blank"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                        <a href="https://x.com/example" target="_blank"><span class="glyphicon glyphicon-comment"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="panel panel-default">
+            <div class="panel-heading text-center">
+                <p>VLU © 2024</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

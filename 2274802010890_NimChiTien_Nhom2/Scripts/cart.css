@@ -1,0 +1,129 @@
+.contact-section,
+.cart-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-heading {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.cart-table {
+    background-color: #fff;
+}
+
+.cart-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+.cart-table td {
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 12px;
+}
+
+.cart-item-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cart-quantity {
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+}
+
+.cart-remove {
+    transition: background-color 0.3s;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.cart-remove:hover {
+    background-color: #c9302c;
+}
+
+.cart-footer {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.cart-total {
+    color: #d9534f;
+    font-size: 1.2em;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.cart-checkout {
+    background-color: #2980b9;
+    border-color: #2e6da4;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cart-checkout:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+@media (max-width: 767px) {
+    .cart-heading {
+        font-size: 1.5em;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 8px;
+    }
+
+    .cart-item-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .cart-quantity {
+        width: 60px;
+    }
+
+    .cart-footer .col-sm-6 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .cart-footer .text-right {
+        text-align: center !important;
+    }
+
+    .cart-total {
+        min-width: 60px;
+    }
+
+    .cart-checkout {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+}

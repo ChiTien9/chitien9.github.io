@@ -1,0 +1,84 @@
+/* Shared Styles */
+.account-section {
+    padding: 50px 30px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-heading {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form#accountForm {
+    max-width: 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #34495e;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control {
+    font-size: 1.05em;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button.btn-info {
+    font-size: 1em;
+    padding: 6px 16px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-form {
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .account-heading {
+        font-size: 1.5em;
+    }
+
+    .form-control {
+        font-size: 1em;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .navbar-form {
+        padding: 5px 10px;
+    }
+}
