@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="poly.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>PC - Nhóm 2</title>
+</head>
+<body>
+    <div class="container" style="height: auto">
+        <header class="row">
+            <div class="shopping-mall">
+                <h1>Nhóm<span> <img style="width: 52px; height: auto;" src="../Images/02.jpg" alt=""></span> Laptop</h1>
+                <h5>The center point of the future technology</h5>
+            </div>
+            <img class="pull-right" src="../Images/aidee.png" />
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="introduction.html"><span class="glyphicon glyphicon-list-alt"></span> Giới
+                                thiệu<span class="sr-only">(current)</span></a></li>
+                        <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-th-list"></span> Danh mục<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="categoryphone.html">Điện thoại di động</a></li>
+                                <li><a href="categorylaptop.html">Máy tính xách tay</a></li>
+                                <li class="active"><a href="categorydesktop.html">Máy tính để bàn</a></li>
+                                <li><a href="categorymouse.html">Chuột</a></li>
+                                <li><a href="categorykeyboard.html">Bàn phím</a></li>
+                                <li><a href="categoryadapter.html">Adapter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nhập từ khóa" id="searchInput">
+                        </div>
+                        <button type="submit" class="btn btn-default" onclick="searchProducts()"><span class="glyphicon glyphicon-search"></span>
+                            Tìm kiếm</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-user"></span> Tài khoản<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="accountinfo.html">Thông tin tài khoản</a></li>
+                                <li><a href="changepassword.html">Đổi mật khẩu</a></li>
+                                <li><a href="accountsettings.html">Cài đặt tài khoản</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-xs-12">
+                <div style="margin: 20px 0;">
+                    <h3 style="font-family: Arial, sans-serif; color: #333;">Máy tính</h3>
+                    <hr style="border: 1px solid #ccc; width: calc(100% - 100px); margin-left: 0; margin-top: 5px;">
+                </div>
+            </div>
+        </div>
+        <!-- Content Section -->
+        <div class="row">
+            <article class="col-sm-9">
+                <!-- Product Cards -->
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="../Images/PC.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4>ROG STRIX X87OE-H GAMING WIFI7</h4>
+                            <p>Hatsune Miku Edition!</p>
+                            <p><strong>$3939</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('ROG STRIX X87OE-H GAMING WIFI7', 3939)">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="../Images/PC2.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4>ROG RYUO IV 360 ARGB</h4>
+                            <p>Hatsune Miku Edition!</p>
+                            <p><strong>$3939</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('ROG RYUO IV 360 ARGB', 3939)">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="../Images/PC3.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4>ROG ASTRAL GEFORCE RTX 5080 O16G</h4>
+                            <p>Hatsune Miku Edition!</p>
+                            <p><strong>$3939</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('ROG ASTRAL GEFORCE RTX 5080 O16G', 3939)">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="../Images/PC4.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4>ROG STRIX XG27ACMEG-G</h4>
+                            <p>Hatsune Miku Edition!</p>
+                            <p><strong>$3939</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('ROG STRIX XG27ACMEG-G', 3939)">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="../Images/PC5.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4>ROG STRIX HELIOS II</h4>
+                            <p>Hatsune Miku Edition!</p>
+                            <p><strong>$3939</strong></p>
+                            <button class="btn btn-primary" onclick="addToCart('ROG STRIX HELIOS II', 3939)">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <aside class="col-sm-3">
+                <div class="poly-cart">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img class="col-sm-5" src="../Images/Leek.PNG" />
+                            <ul class="col-sm-7">
+                                <li><span id="cartItemCount">0</span> items</li>
+                                <li>$<span id="cartTotal">0</span></li>
+                                <li><a href="cart.html" style="font-family:Arial, Helvetica, sans-serif;">Xem giỏ hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form>
+                                <input placeholder="Keywords" class="form-control" id="asideSearchInput" />
+                            </form>
+                        </div>
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <strong>Phân loại</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href="categoryphone.html" class="list-group-item">Điện thoại di động</a>
+                            <a href="categorylaptop.html" class="list-group-item">Máy tính xách tay</a>
+                            <a href="categorydesktop.html" class="list-group-item">Máy tính để bàn</a>
+                            <a href="categorymouse.html" class="list-group-item">Chuột</a>
+                            <a href="categorykeyboard.html" class="list-group-item">Bàn phím</a>
+                            <a href="categoryadapter.html" class="list-group-item">Adapter</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer class="panel panel-default">
+            <div class="panel-heading text-center">
+                <p>VLU © 2024</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
