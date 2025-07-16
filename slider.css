@@ -59,15 +59,19 @@
     font-size: 16px;
     font-weight: bold;
     color: white;
-    background-color: #333;
+    background-color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .view-more-btn:hover {
-    background-color: #555;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
 }
 
 .slider-controls {

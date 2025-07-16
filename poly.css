@@ -70,6 +70,16 @@ header {
     color: #337ab7;
 }
 
+.poly-prod .panel-body h4 a {
+    color: #337ab7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.poly-prod .panel-body h4 a:hover {
+    color: #23527c;
+}
+
 .poly-prod .panel-body ul {
     margin: 15px 0;
 }

@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="poly.css">
-    <link rel="stylesheet" href="cart.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Giỏ hàng - Nhóm 2</title>
+    <title>Thông tin sản phẩm - Nhóm 2</title>
 </head>
 <body>
     <div class="container" style="height: auto">
@@ -33,7 +32,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="introduction.html"><span class="glyphicon glyphicon-list-alt"></span> Giới thiệu</a></li>
+                        <li><a href="introduction.html"><span class="glyphicon glyphicon-list-alt"></span> Giới
+                                thiệu<span class="sr-only">(current)</span></a></li>
                         <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -51,9 +51,10 @@
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nhập từ khóa">
+                            <input type="text" class="form-control" placeholder="Nhập từ khóa" id="searchInput">
                         </div>
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Tìm kiếm</button>
+                        <button type="submit" class="btn btn-default" onclick="searchProducts()"><span class="glyphicon glyphicon-search"></span>
+                            Tìm kiếm</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -68,68 +69,46 @@
                                 <li><a href="#">Đăng xuất</a></li>
                             </ul>
                         </li>
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span id="cartCount">0</span>)</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="row">
-            <article class="col-sm-12">
-                <h2 class="cart-heading">Giỏ hàng của bạn</h2>
-                <div class="cart-section">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Sản phẩm trong giỏ hàng</h4>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered cart-table">
-                            <thead>
-                                <tr>
-                                    <th>Hình ảnh</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Giá</th>
-                                    <th>Số lượng</th>
-                                    <th>Tổng</th>
-                                    <th>Hành động</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="../Images/Laptop2.png" alt="Product 1" class="cart-item-img"></td>
-                                    <td>Kagamine's Laptop</td>
-                                    <td>$02</td>
-                                    <td><input type="number" class="cart-quantity" value="1" min="1"></td>
-                                    <td class="cart-item-total">$02</td>
-                                    <td><button class="cart-remove">Xóa</button></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../Images/Laptop5.png" alt="Product 2" class="cart-item-img"></td>
-                                    <td>M's Birthday Laptop</td>
-                                    <td>$3108</td>
-                                    <td><input type="number" class="cart-quantity" value="2" min="1"></td>
-                                    <td class="cart-item-total">$3108</td>
-                                    <td><button class="cart-remove">Xóa</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="panel-footer cart-footer">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h4>Tổng cộng: <strong class="cart-total">$0</strong></h4>
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <a href="checkout.html" class="btn btn-primary cart-checkout">Thanh toán</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+                <img src="../Images/PC4.png" alt="Laptop X200" class="img-responsive" style="margin: 20px 0;">
+            </div>
+            <div class="col-md-6">
+                <div style="margin: 20px 0;">
+                    <h3 style="font-family: Arial, sans-serif; color: #333;">ROG STRIX XG27ACMEG-G</h3>
+                    <hr style="border: 1px solid #ccc; width: calc(100% - 100px); margin-left: 0; margin-top: 5px;">
+                    <p class="price" style="font-size: 1.5em; color: #28a745; font-weight: bold;">$3939</p>
+                    <p>Miku Limited Edition!</p>
+                    <p><strong>Features:</strong></p>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Meh</li>
+                        <li>Meh</li>
+                        <li>Meh</li>
+                        <li>Meh</li>
+                    </ul>
+                    <button class="btn btn-info" style="margin-top: 20px;" onclick="addToCart()">Add to Cart</button>
                 </div>
-            </article>
+            </div>
         </div>
         <footer class="panel panel-default">
             <div class="panel-heading text-center">
-                <p>VLU © 2025</p>
+                <p>VLU © 2024</p>
             </div>
         </footer>
     </div>
-    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function addToCart() {
+            let price = 3939;
+            alert("Đã thêm sản phẩm vào giỏ hàng" + price.toFixed(2));
+            let cartCount = parseInt($('#cartCount').text()) || 0;
+            $('#cartCount').text(cartCount + 1);
+        }
+    </script>
 </body>
 </html>

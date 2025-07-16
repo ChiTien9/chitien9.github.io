@@ -1,0 +1,23 @@
+        .status-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .progress {
+            margin-bottom: 20px;
+        }
+        .status-update {
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .btn-primary {
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+        .btn-primary:hover {
+            background-color: #286090;
+            border-color: #204d74;
+        }

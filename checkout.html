@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="poly.css">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="checkout.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Giỏ hàng - Nhóm 2</title>
+    <title>Thanh toán - Nhóm 2</title>
 </head>
+
 <body>
     <div class="container" style="height: auto">
         <header class="row">
@@ -29,11 +31,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+                    <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> Trang
+                        chủ</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="introduction.html"><span class="glyphicon glyphicon-list-alt"></span> Giới thiệu</a></li>
+                        <li><a href="introduction.html"><span class="glyphicon glyphicon-list-alt"></span> Giới
+                                thiệu<span class="sr-only">(current)</span></a></li>
                         <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -51,9 +55,11 @@
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nhập từ khóa">
+                            <input type="text" class="form-control" placeholder="Nhập từ khóa" id="searchInput">
                         </div>
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Tìm kiếm</button>
+                        <button type="submit" class="btn btn-default" onclick="searchProducts()"><span
+                                class="glyphicon glyphicon-search"></span>
+                            Tìm kiếm</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -68,61 +74,42 @@
                                 <li><a href="#">Đăng xuất</a></li>
                             </ul>
                         </li>
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng (<span
+                                    id="cartCount">0</span>)</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="row">
-            <article class="col-sm-12">
-                <h2 class="cart-heading">Giỏ hàng của bạn</h2>
-                <div class="cart-section">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Sản phẩm trong giỏ hàng</h4>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table table-bordered cart-table">
-                            <thead>
-                                <tr>
-                                    <th>Hình ảnh</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Giá</th>
-                                    <th>Số lượng</th>
-                                    <th>Tổng</th>
-                                    <th>Hành động</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="../Images/Laptop2.png" alt="Product 1" class="cart-item-img"></td>
-                                    <td>Kagamine's Laptop</td>
-                                    <td>$02</td>
-                                    <td><input type="number" class="cart-quantity" value="1" min="1"></td>
-                                    <td class="cart-item-total">$02</td>
-                                    <td><button class="cart-remove">Xóa</button></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../Images/Laptop5.png" alt="Product 2" class="cart-item-img"></td>
-                                    <td>M's Birthday Laptop</td>
-                                    <td>$3108</td>
-                                    <td><input type="number" class="cart-quantity" value="2" min="1"></td>
-                                    <td class="cart-item-total">$3108</td>
-                                    <td><button class="cart-remove">Xóa</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="panel-footer cart-footer">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h4>Tổng cộng: <strong class="cart-total">$0</strong></h4>
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <a href="checkout.html" class="btn btn-primary cart-checkout">Thanh toán</a>
-                            </div>
+            <div class="col-xs-12">
+                <div class="checkout-container">
+                    <h2 class="text-center">Thanh toán đơn hàng</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên:</label>
+                            <input type="text" class="form-control" id="fullName" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Phương thức thanh toán:</label>
+                            <select class="form-control" id="paymentMethod" required>
+                                <option value="">Chọn phương thức</option>
+                                <option value="cash">Thanh toán khi nhận hàng (COD)</option>
+                                <option value="card">Thẻ tín dụng/ghi nợ</option>
+                                <option value="bank">Chuyển khoản ngân hàng</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" id="payButton">Thanh toán</button>
+                    </form>
                 </div>
-            </article>
+            </div>
         </div>
         <footer class="panel panel-default">
             <div class="panel-heading text-center">
@@ -130,6 +117,14 @@
             </div>
         </footer>
     </div>
-    <script src="cart.js"></script>
+    <script>
+        document.getElementById('checkoutForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Thanh toán đơn hàng thành công!');
+            setTimeout(function () { window.location.href = 'deliverystatus.html'; }, 1000);
+            this.reset();
+        });
+    </script>
 </body>
+
 </html>

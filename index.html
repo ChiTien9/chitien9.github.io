@@ -41,12 +41,12 @@
                                 aria-haspopup="true" aria-expanded="false"><span
                                     class="glyphicon glyphicon-th-list"></span> Danh mục<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Điện thoại di động</a></li>
-                                <li><a href="#">Máy tính xách tay</a></li>
-                                <li><a href="#">Máy tính để bàn</a></li>
-                                <li><a href="#">Chuột</a></li>
-                                <li><a href="#">Bàn phím</a></li>
-                                <li><a href="#">Adapter</a></li>
+                                <li><a href="categoryphone.html">Điện thoại di động</a></li>
+                                <li><a href="categorylaptop.html">Máy tính xách tay</a></li>
+                                <li><a href="categorydesktop.html">Máy tính để bàn</a></li>
+                                <li><a href="categorymouse.html">Chuột</a></li>
+                                <li><a href="categorykeyboard.html">Bàn phím</a></li>
+                                <li><a href="categoryadapter.html">Adapter</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -64,8 +64,8 @@
                                     class="glyphicon glyphicon-user"></span> Tài khoản<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="accountinfo.html">Thông tin tài khoản</a></li>
-                                <li><a href="#">Đổi mật khẩu</a></li>
-                                <li><a href="#">Cài đặt tài khoản</a></li>
+                                <li><a href="changepassword.html">Đổi mật khẩu</a></li>
+                                <li><a href="accountsettings.html">Cài đặt tài khoản</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Đăng xuất</a></li>
                             </ul>
@@ -82,14 +82,14 @@
                     <div class="slider" id="slider">
                         <div class="slide">
                             <div class="image-section">
-                                <img src="../Images/Laptop1.png" alt="Laptop1">
+                                <img src="../Images/Laptop5.png" alt="Laptop1">
                             </div>
                             <div class="text-section">
                                 <div class="slide-caption">
-                                    <h3>Laptop1</h3>
+                                    <h3>M's Birthday Laptop</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
-                                <button class="view-more-btn">XEM THÊM</button>
+                                <a href="productdetailslaptop3.html" class="view-more-btn">XEM THÊM</a>
                             </div>
                         </div>
                         <div class="slide">
@@ -98,22 +98,22 @@
                             </div>
                             <div class="text-section">
                                 <div class="slide-caption">
-                                    <h3>Laptop2</h3>
+                                    <h3>Kagamine's Laptop</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
-                                <button class="view-more-btn">XEM THÊM</button>
+                                <a href="productdetailslaptop1.html" class="view-more-btn">XEM THÊM</a>
                             </div>
                         </div>
                         <div class="slide">
                             <div class="image-section">
-                                <img src="../Images/Laptop3.png" alt="Workstation">
+                                <img src="../Images/Laptop.png" alt="Workstation">
                             </div>
                             <div class="text-section">
                                 <div class="slide-caption">
-                                    <h3>Laptop3</h3>
+                                    <h3>Aidee Lapatop</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
-                                <button class="view-more-btn" onclick="viewMore()">XEM THÊM</button>
+                                <a href="productdetailslaptop2.html" class="view-more-btn">XEM THÊM</a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
             <div class="col-xs-12">
                 <div style="margin: 20px 0;">
                     <h3 style="font-family: Arial, sans-serif; color: #333; display: inline-block;">Bán chạy</h3>
-                    <hr style="border: 1px solid #ccc; width: calc(100% - 100px); margin-left: 10px; display: inline-block; vertical-align: middle;">
+                    <hr style="border: 1px solid #ccc; width: calc(100% - 100px); margin-left: 0; margin-top: 5px;">
                 </div>
             </div>
         </div>
@@ -139,8 +139,8 @@
                 <div class="col-sm-4 poly-prod">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="../Images/Laptop4.jpg" alt="Sample Product">
-                            <h4>Kagamine's Laptop</h4>
+                            <img src="../Images/Laptop2.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4><a href="productdetailslaptop1.html">Kagamine's Laptop</a></h4>
                             <p>Muse Twin!</p>
                             <p><strong>$2</strong></p>
                             <button class="btn btn-primary" onclick="addToCart('Kagamine\'s Laptop', 2)">Thêm vào giỏ</button>
@@ -150,8 +150,8 @@
                 <div class="col-sm-4 poly-prod">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="../Images/Laptop4.jpg" alt="Sample Product">
-                            <h4>Aidee Laptop</h4>
+                            <img src="../Images/Laptop.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4><a href="productdetailslaptop2.html">Aidee Laptop</a></h4>
                             <p>Whose "Aidee" might it belong to?</p>
                             <p><strong>$01</strong></p>
                             <button class="btn btn-primary" onclick="addToCart('Aidee Laptop', 1)">Thêm vào giỏ</button>
@@ -161,8 +161,8 @@
                 <div class="col-sm-4 poly-prod">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="../Images/Laptop4.jpg" alt="Sample Product">
-                            <h4>Sankyu Laptop</h4>
+                            <img src="../Images/Laptop2.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4><a href="productdetailslaptop4.html">Sankyu Laptop</a></h4>
                             <p>Appreciation for all her fans!</p>
                             <p><strong>$39</strong></p>
                             <button class="btn btn-primary" onclick="addToCart('Sankyu Laptop', 39)">Thêm vào giỏ</button>
@@ -172,8 +172,8 @@
                 <div class="col-sm-4 poly-prod">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="../Images/Laptop4.jpg" alt="Sample Product">
-                            <h4>M's Birthday Laptop</h4>
+                            <img src="../Images/Laptop5.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4><a href="productdetails.html">M's Birthday Laptop</a></h4>
                             <p>Guess whose birthday it is!</p>
                             <p><strong>$3108</strong></p>
                             <button class="btn btn-primary" onclick="addToCart('M\'s Birthday Laptop', 3108)">Thêm vào giỏ</button>
@@ -183,8 +183,8 @@
                 <div class="col-sm-4 poly-prod">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="../Images/Laptop4.jpg" alt="Sample Product">
-                            <h4>Baguette Laptop</h4>
+                            <img src="../Images/Laptop2.png" alt="Sample Product" style="display: block; margin: 0 auto;">
+                            <h4><a href="productdetailslaptop5.html">Baguette Laptop</a></h4>
                             <p>A baguette-shaped Laptop..?</p>
                             <p><strong>$0104</strong></p>
                             <button class="btn btn-primary" onclick="addToCart('Baguette Laptop', 104)">Thêm vào giỏ</button>
@@ -215,12 +215,12 @@
                             <strong>Phân loại</strong>
                         </div>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">Điện thoại di động</a>
-                            <a href="#" class="list-group-item">Máy tính xách tay</a>
-                            <a href="#" class="list-group-item">Máy tính để bàn</a>
-                            <a href="#" class="list-group-item">Chuột</a>
-                            <a href="#" class="list-group-item">Bàn phím</a>
-                            <a href="#" class="list-group-item">Adapter</a>
+                            <a href="categoryphone.html" class="list-group-item">Điện thoại di động</a>
+                            <a href="categorylaptop.html" class="list-group-item">Máy tính xách tay</a>
+                            <a href="categorydesktop.html" class="list-group-item">Máy tính để bàn</a>
+                            <a href="categorymouse.html" class="list-group-item">Chuột</a>
+                            <a href="categorykeyboard.html" class="list-group-item">Bàn phím</a>
+                            <a href="categoryadapter.html" class="list-group-item">Adapter</a>
                         </div>
                     </div>
                 </div>
