@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="poly.css">
-    <link rel="stylesheet" href="deliverystatus.css">
+    <link rel="stylesheet" href="purchased.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="deliverystatus.js"></script>
-    <title>Trạng thái giao hàng - Nhóm 2</title>
+    <title>Thông tin sản phẩm - Nhóm 2</title>
 </head>
 <body>
     <div class="container" style="height: auto">
@@ -83,28 +82,59 @@
                 </button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="status-container">
-                    <h2 class="text-center">Trạng thái giao hàng</h2>
-                    <p><strong>Số đơn hàng:</strong> #HSNMK39</p>
-                    <p><strong>Ngày đặt hàng:</strong> 16/07/2025</p>
-                    <p><strong>Ngày giao dự kiến:</strong> 20/07/2025</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                            Đang giao hàng
-                        </div>
+        <div class="container purchased-history-page-container">
+        <h1>LỊCH SỬ MUA HÀNG</h1>
+
+            <div class="product-card">
+                <div class="product-status shipping">
+                    <span>Đang vận chuyển</span> <i class="fas fa-truck"></i>
+                </div>
+                <div class="product-details">
+                    <img src="../Images/Laptop.png" alt="">
+                    <div class="info">
+                        <h3><b>Laptop Dell Latitude 7420 Core i7-1185G7, Ram 16GB, SSD 256GB, 14 Inch FHD</b></h3>
+                        <p class="warranty-text">Bảo hành 12 tháng</p>
+                        <p class="total-price-text">Tổng số tiền: <span class="price-value">$20.00</span></p>
                     </div>
-                    <p class="status-update"><strong>Trạng thái cập nhật:</strong> Gói hàng đang trên đường giao đến bạn.</p>
-                    <button class="btn btn-primary btn-block" id="refreshStatus">Làm mới trạng thái</button>
+                </div>
+                <div class="product-actions">
+                    <a href="contact.html" class="btn btn-default contact-button">Liên hệ</a>
+                    <a href="deliverystatus.html" class="btn btn-default delivery-status-buton">Chi tiết</a>
                 </div>
             </div>
-        </div>
+
+            <div class="product-card">
+                <div class="product-status completed">
+                    <span>Hoàn thành</span> <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="product-details">
+                    <img src="../Images/Keyboard1.png" alt="">
+                    <div class="info">
+                        <h3><b>Keyboard</b></h3>
+                        <p class="warranty-text">Bảo hành 3 tháng</p>
+                        <p class="total-price-text">Tổng số tiền: <span class="price-value">$5.99</span></p>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <a href="contact.html" class="btn btn-default contact-button">Liên hệ</a>
+                    <a href="deliverystatus.html" class="btn btn-default delivery-status-buton">Chi tiết</a>
+                </div>
+            </div>
         <footer class="panel panel-default">
             <div class="panel-heading text-center">
-                <p>VLU © 2025</p>
+                <p>VLU © 2024</p>
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
+    <script>
+        function addToCart() {
+            let price = 3939;
+            alert("Đã thêm sản phẩm vào giỏ hàng" + price.toFixed(2));
+            let cartCount = parseInt($('#cartCount').text()) || 0;
+            $('#cartCount').text(cartCount + 1);
+        }
+    </script>
+
 </body>
 </html>
