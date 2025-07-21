@@ -18,6 +18,10 @@
     text-align: center;
 }
 
+.custom-status-btn {
+    float: right;
+}
+
 .cart-table {
     background-color: #fff;
 }
@@ -90,9 +94,10 @@
 }
 
 .custom-status-btn {
-    background-color: white;
+    background-color:white;
     color: black;
     border: 1px solid #ccc;
+    margin-right: 20px;
 }
 
 .custom-status-btn:hover {
